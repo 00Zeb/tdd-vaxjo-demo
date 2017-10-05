@@ -5,7 +5,8 @@ import org.junit.Test;
 public class CardGameTest {
 
 	@Test
-	public void testName() throws Exception {
-		
+	public void draw() throws Exception {
+		CardGame cardgame = new CardGame();
+		assertEquals("draw", cardgame.play(new char[]{'2'}, new char[] {'2'}));
 	}
 }
