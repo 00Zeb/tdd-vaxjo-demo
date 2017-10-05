@@ -11,10 +11,10 @@ public class CardGame {
 				p2Wins++;
 		}
 		
-		if(p1Wins > 0)
+		if(p1Wins > p2Wins)
 			return "p1 wins " + p1Wins + " to " + p2Wins;
-		if(cs[0] < cs2[0])
-			return "p2 wins 1 to 0";
+		if(p1Wins < p2Wins)
+			return "p2 wins " + p2Wins + " to " + p1Wins;
 		return "draw";
 	}
 
