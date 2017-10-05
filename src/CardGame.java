@@ -5,9 +5,11 @@ public class CardGame {
 		int p1Wins = 0;
 		int p2Wins = 0;
 		for (int i = 0; i < cs2.length; i++) {
-			if(cs[i] > cs2[i])
+			int p1Card = valueOf(cs[i]);
+			int p2Card = valueOf(cs2[i]);
+			if(p1Card > p2Card)
 				p1Wins++;
-			if(cs[i] < cs2[i])
+			if(p1Card < p2Card)
 				p2Wins++;
 		}
 		
@@ -18,4 +20,7 @@ public class CardGame {
 		return "draw";
 	}
 
+	private int valueOf(char c) {
+		return new String(new char[] {'2','3','4','5','6','7','8','9','T','J','Q','K','A'}).indexOf(c);
+	}
 }
