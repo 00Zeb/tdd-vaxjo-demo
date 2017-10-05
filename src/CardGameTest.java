@@ -24,5 +24,6 @@ public class CardGameTest {
 	public void multiple_cards() {
 		CardGame cardgame = new CardGame();
 		assertEquals("p1 wins 2 to 0", cardgame.play(hand('3','3'), hand('2','2')));
+		assertEquals("p1 wins 2 to 1", cardgame.play(hand('3','3','2'), hand('2','2','3')));
 	}
 }
