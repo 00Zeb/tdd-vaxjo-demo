@@ -1,12 +1,12 @@
 
 public class CardGame {
 
-	public String play(char[] cs, char[] cs2) {
+	public String play(char[] p1Cards, char[] p2Cards) {
 		int p1Wins = 0;
 		int p2Wins = 0;
-		for (int i = 0; i < cs2.length; i++) {
-			int p1Card = valueOf(cs[i]);
-			int p2Card = valueOf(cs2[i]);
+		for (int i = 0; i < p2Cards.length; i++) {
+			int p1Card = valueOf(p1Cards[i]);
+			int p2Card = valueOf(p2Cards[i]);
 			if (p1Card > p2Card)
 				p1Wins++;
 			if (p1Card < p2Card)
